@@ -748,10 +748,10 @@ config DEFAULT_TCP_CONG
 	default "reno" if DEFAULT_RENO
 	default "dctcp" if DEFAULT_DCTCP
 	default "cdg" if DEFAULT_CDG
-	default "bbr" if DEFAULT_BBR
 	default "sociopath" if DEFAULT_SOCIOPATH
 	default "agilesd" if DEFAULT_AGILESD
         default "china" if DEFAULT_CHINA
+	default "bbr" if DEFAULT_BBR
 	default "cubic"
 
 config TCP_MD5SIG
