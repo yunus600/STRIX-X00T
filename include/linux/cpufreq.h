@@ -519,7 +519,10 @@ extern struct cpufreq_governor cpufreq_gov_schedutil;
 extern struct cpufreq_governor cpufreq_gov_sched;
 #define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_sched)
 extern struct cpufreq_governor cpufreq_gov_blu_schedutil;
-#define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_blu_schedutil)
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_blu_schedutil)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_DARKNESSSCHED)
+extern struct cpufreq_governor cpufreq_gov_darknesssched;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_darknesssched)
 #endif
 
 static inline void cpufreq_policy_apply_limits(struct cpufreq_policy *policy)
