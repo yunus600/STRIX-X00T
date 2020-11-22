@@ -777,10 +777,10 @@ retry:
 
 	if (has_initialized) {
 		r->initialized = 1;
-		r->entropy_total = 0;
+		r->entropy_count = 0;
 		if (r == &nonblocking_pool) {
 			process_random_ready_list();
-			wake_up_all(&urandom_init_wait);
+			wake_up_all(&random_write_wait);
 			pr_notice("random: %s pool is initialized\n", r->name);
 		}
 	}
