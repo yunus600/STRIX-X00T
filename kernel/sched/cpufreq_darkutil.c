@@ -1007,7 +1007,6 @@ static int dugov_init(struct cpufreq_policy *policy)
                 }
 	}
 
-tunables->iowait_boost_enable = policy->iowait_boost_enable;
 	tunables->silver_suspend_max_freq = DEFAULT_SUSPEND_MAX_FREQ_SILVER;
 	tunables->gold_suspend_max_freq = DEFAULT_SUSPEND_MAX_FREQ_GOLD;
 	tunables->suspend_capacity_factor = DEFAULT_SUSPEND_CAPACITY_FACTOR;
