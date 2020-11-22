@@ -778,7 +778,7 @@ retry:
 	if (has_initialized) {
 		r->initialized = 1;
 		r->entropy_count = 0;
-		if (r == &nonblocking_pool) {
+		if (r == &blocking_pool) {
 			process_random_ready_list();
 			wake_up_all(&random_write_wait);
 			pr_notice("random: %s pool is initialized\n", r->name);
